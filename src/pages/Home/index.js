@@ -4,7 +4,7 @@ import {View, RefreshControl, FlatList} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {ContactCard} from '../../components';
 import {getContacts} from '../../redux/actions/contacts.action';
-import {Card, FAB, Icon, withTheme} from 'react-native-elements';
+import {Card, FAB, Icon, Text, withTheme} from 'react-native-elements';
 import {HomeSkeleton} from '../../components/CustomSkeleton';
 
 function Home({theme}) {
@@ -48,6 +48,16 @@ function Home({theme}) {
           [...Array(2)].map((e, i) => <HomeSkeleton key={i} />)
         )}
       </Card>
+      <View
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 10,
+        }}>
+        <Text>Pull to Refresh</Text>
+        <Text>V</Text>
+      </View>
       <FAB
         color={theme.colors.primary}
         size="small"

@@ -18,6 +18,7 @@ import {
 import axios from 'axios';
 
 import {URL_API} from '../../config';
+import Toast from 'react-native-simple-toast';
 
 const url = URL_API;
 
@@ -53,8 +54,10 @@ export const createContactAction = input => async dispatch => {
     const res = await axios.post(`${url}`, input);
     dispatch(getContacts());
     dispatch({type: CREATE_CONTACTS_SUCCESS});
+    Toast.show('Create Contact Success!');
   } catch (error) {
     dispatch({type: CREATE_CONTACTS_ERROR, error: error});
+    Toast.show('Create Contact Error!');
   }
 };
 
@@ -65,8 +68,10 @@ export const deleteContactAction = id => async dispatch => {
     const res = await axios.delete(`${url}/${id}`);
     dispatch(getContacts());
     dispatch({type: DELETE_CONTACTS_SUCCESS});
+    Toast.show('Delete Success!');
   } catch (error) {
     dispatch({type: DELETE_CONTACTS_ERROR, error: error});
+    Toast.show('Delete Error!');
   }
 };
 
@@ -77,9 +82,10 @@ export const updateContactAction = (id, value) => async dispatch => {
     const res = await axios.put(`${url}/${id}`, value);
     dispatch(getContactByid(id));
     dispatch(getContacts());
-
+    Toast.show('Update Success!');
     dispatch({type: UPDATE_CONTACTS_SUCCESS});
   } catch (error) {
+    Toast.show('Update Error!');
     dispatch({type: UPDATE_CONTACTS_ERROR, error: error});
   }
 };
