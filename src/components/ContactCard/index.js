@@ -16,7 +16,7 @@ export default function ContactCard({firstName, lastName, photo, id}) {
       }>
       <ListItem bottomDivider>
         <Avatar
-          title={`${firstName[0]}${lastName[0]}`}
+          title={`${firstName[0]} ${lastName[0]}`}
           rounded={true}
           size="medium"
           source={{uri: photo}}
