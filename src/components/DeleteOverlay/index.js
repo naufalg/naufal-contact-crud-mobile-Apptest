@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {Text, View} from 'react-native';
-import {Button, Overlay, withTheme} from 'react-native-elements';
+import {View} from 'react-native';
+import {Button, Overlay, Text, withTheme} from 'react-native-elements';
 import {useDispatch} from 'react-redux';
 import {
   deleteContactAction,
@@ -26,9 +26,14 @@ function DeleteOverlay({firstName, lastName, id, theme}) {
         onPress={toggleOverlay}
       />
       <Overlay isVisible={visible} onBackdropPress={toggleOverlay}>
-        <Text>
+        <Text h4>
           Delete {firstName} {lastName} ?
         </Text>
+        <Button
+          buttonStyle={{backgroundColor: theme.colors.grey3, marginTop: 20}}
+          title="No"
+          onPress={toggleOverlay}
+        />
         <Button
           buttonStyle={{backgroundColor: theme.colors.error, marginTop: 20}}
           title="Yes"
@@ -38,11 +43,6 @@ function DeleteOverlay({firstName, lastName, id, theme}) {
             dispatch(getContacts());
             navigation.navigate('Contacts');
           }}
-        />
-        <Button
-          buttonStyle={{marginTop: 20}}
-          title="No"
-          onPress={toggleOverlay}
         />
       </Overlay>
     </View>
