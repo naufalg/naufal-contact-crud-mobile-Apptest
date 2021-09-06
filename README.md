@@ -37,7 +37,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[screenshot1]
+[![screenshot1][screenshot1]]
 
 Build android contacts app with CRUD functionality
 
@@ -78,7 +78,7 @@ Install React Native Environment Setup (including android studio), [more details
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-[mock]
+[![mock][mock]]
 
 
 
