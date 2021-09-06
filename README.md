@@ -57,22 +57,27 @@ Install React Native Environment Setup (including android studio), [more details
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/naufalg/naufal-contact-crud-mobile-Apptest.git
-   ```
-2. Install packages
-   ```sh
-   yarn install
-   ```
-3. Start react-native
-   ```sh
-   react-native start 
-   ```
-4. Start android
-   ```sh
-   react-native run-android 
-   ```
+A. Install in android device:
+  1. Download apk [here](https://drive.google.com/file/d/1492h29qHfOO42cPmasoGsZyJ5LeD1kl6/view?usp=sharing)
+  2. Install apk
+
+B. Develop apps:
+  1. Clone the repo
+     ```sh
+     git clone https://github.com/naufalg/naufal-contact-crud-mobile-Apptest.git
+     ```
+  2. Install packages
+     ```sh
+     yarn install
+     ```
+  3. Start react-native
+     ```sh
+     react-native start 
+     ```
+  4. Start android
+     ```sh
+     react-native run-android 
+     ```
 
 
 <!-- USAGE EXAMPLES -->
